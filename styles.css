@@ -1,10 +1,22 @@
 body{
-    width: 300px;
+    width: 400px;
     height: 300px;
     text-align: center;
     margin:10px;
     padding:5px;
+    background-color: #5cb6f9;
 }
 .buttons{
     margin:30px 0 0 0;
+}
+.timer{
+    color: #f2fbff;
+    text-align: center;
+    width: 15rem;
+    height:15rem;
+    border: 6px solid #e8f5fc;
+    border-radius: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
