@@ -1,0 +1,40 @@
+{
+  "name": "Animedoro",
+  "description": "Pomodoro extension for anime lovers.",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "testbackground.js"
+   
+  },
+  "permissions": [
+    "storage",
+    "scripting",
+    "alarms",
+    "notifications"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "jquery.js",
+        "testpopup.js"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "images/46470_pandora_icon.png"
+      ],
+      "matches": [],
+      "extension_ids": [],
+      "use_dynamic_url": false
+    }
+  ]
+}
