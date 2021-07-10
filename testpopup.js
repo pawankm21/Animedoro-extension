@@ -59,7 +59,7 @@ var ViewTimer = {
         timer = setInterval(() => {
           var date = new Date();
           var df = Math.floor((endTime - date) / 1000) + 1;
-          $("#time").html(`${Math.floor(df / 60)}:${df % 60}`);
+          $("#time").html(`${Math.floor(df / 60)} : ${df % 60}`);
           if (!df) {
             $("#time").html("00:00");
             clearInterval(timer);
@@ -68,12 +68,12 @@ var ViewTimer = {
           }
         }, 1000);
       } else {
-        $("#time").html("00:00");
+        $("#time").html("00 : 00");
       }
     });
   },
   stop: () => {
-    $("#time").html("00:00");
+    $("#time").html("00 : 00");
     clearInterval(timer);
     $("#session").prop("disabled", false);
     $("#break").prop("disabled", false);
