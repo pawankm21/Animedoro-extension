@@ -5,7 +5,6 @@
   "manifest_version": 3,
   "background": {
     "service_worker": "testbackground.js"
-   
   },
   "permissions": [
     "storage",
@@ -14,7 +13,12 @@
     "notifications"
   ],
   "action": {
-    "default_popup": "popup.html"
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.png",
+      "32": "icon.png",
+      "64": "icon.png"
+    }
   },
   "content_scripts": [
     {
