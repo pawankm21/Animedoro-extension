@@ -6,6 +6,7 @@ chrome.runtime.onInstalled.addListener(() => {
     breakDuration: 1,
     endTime: null,
     isTimerStarted: false,
+    isBreak: false,
   });
   console.log("initialized endTime=false,istimer=false");
 });
@@ -23,13 +24,14 @@ chrome.alarms.onAlarm.addListener((alarm) => {
   chrome.storage.sync.set({
     endTime: null,
     isTimerStarted: false,
+    isBreak: false,
   });
   console.log("endtime is set to nul and timerstarted set to false");
 });
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   if (request.button == "session") {
     registration.showNotification("Kon'nichiwa", {
-      body: "It's time for some work!!",
+      body: "Work Timer is set!!",
       icon: "images/46470_pandora_icon.png",
     });
     console.log("bg got session message");
@@ -40,6 +42,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     chrome.storage.sync.set({
       endTime: endTime,
       isTimerStarted: true,
+      isBreak: false,
     });
     chrome.storage.sync.get(["sessionDuration"], (res) => {
       console.log("endTime is set and isTimer is true");
@@ -51,7 +54,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   }
   if (request.button == "break") {
     registration.showNotification("Kon'nichiwa", {
-      body: "Come on, take a break!!",
+      body: "Break Timer is Set",
       icon: "images/46470_pandora_icon.png",
     });
     console.log("bg got break message");
@@ -62,6 +65,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     chrome.storage.sync.set({
       endTime: endTime,
       isTimerStarted: true,
+      isBreak: true,
     });
     chrome.storage.sync.get(["breakDuration"], (res) => {
       console.log("endTime is set and isTimer is true");
@@ -80,6 +84,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
       chrome.storage.sync.set({
         endTime: null,
         isTimerStarted: false,
+        isBreak: false,
       });
       console.log("cleared all alarms");
     });

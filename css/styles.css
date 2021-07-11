@@ -1,9 +1,7 @@
 body{
-    width: 400px;
-    height: 300px;
+    width: 300px;
+    height: 200px;
     text-align: center;
-    margin:10px;
-    padding:5px;
     background-color: #5cb6f9;
 }
 .buttons{
