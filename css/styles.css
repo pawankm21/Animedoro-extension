@@ -7,7 +7,8 @@ body{
     background-color: #5cb6f9;
 }
 .buttons{
-    margin:30px 0 0 0;
+    margin:30px 0 0 2px;
+    padding: 5px;
 }
 .timer{
     color: #f2fbff;
@@ -20,6 +21,7 @@ body{
     justify-content: center;
     align-items: center;
 }
+
 #session{
     border: none;
     position: absolute;
@@ -56,3 +58,11 @@ body{
     height: 90px;  
     width: 90px;
 }
+=======
+#fact{
+    font-style: italic;
+    padding: 3px;
+    margin: 2px;
+    font-size: 1rem;
+}
+
