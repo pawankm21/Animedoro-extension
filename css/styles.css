@@ -1,7 +1,9 @@
 body{
-    width: 300px;
-    height: 200px;
+    width: 400px;
+    height: 300px;
     text-align: center;
+    margin:10px;
+    padding:5px;
     background-color: #5cb6f9;
 }
 .buttons{
@@ -17,4 +19,40 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+#session{
+    border: none;
+    position: absolute;
+    left: 40px;
+    bottom: 60px;
+    background-image: url(start.png);
+    background-position: center;
+    background-size: 80px 80px;
+    background-repeat: no-repeat;
+    background-color: #5cb6f9;
+    height: 90px;  
+    width: 90px;
+}
+#end{
+    border: none;
+    position: absolute;
+    right: 40px;
+    bottom: 60px;
+    background-image: url(reset.png);
+    background-position: center;
+    background-size: 68px 68px;
+    background-repeat: no-repeat;
+    background-color: #5cb6f9;
+    height: 90px;  
+    width: 90px;
+}
+#break{
+    border: none;
+    background-image: url(icon.png);
+    background-position: center;
+    background-size: 68px 68px;
+    background-repeat: no-repeat;
+    background-color: #5cb6f9;
+    height: 90px;  
+    width: 90px;
 }
