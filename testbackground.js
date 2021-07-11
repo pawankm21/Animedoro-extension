@@ -32,7 +32,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   if (request.button == "session") {
     registration.showNotification("Kon'nichiwa", {
       body: "Work Timer is set!!",
-      icon: "images/46470_pandora_icon.png",
+      icon: "images/icon.png",
     });
     console.log("bg got session message");
     var time = new Date();
@@ -55,7 +55,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   if (request.button == "break") {
     registration.showNotification("Kon'nichiwa", {
       body: "Break Timer is Set",
-      icon: "images/46470_pandora_icon.png",
+      icon: "images/icon.png",
     });
     console.log("bg got break message");
     var time = new Date();
@@ -78,7 +78,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   if (request.button == "end") {
     registration.showNotification("Ended", {
       body: "timer is off",
-      icon: "images/46470_pandora_icon.png",
+      icon: "images/icon.png",
     });
     chrome.alarms.clearAll(() => {
       chrome.storage.sync.set({

@@ -15,9 +15,9 @@
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
-      "16": "icon.png",
-      "32": "icon.png",
-      "64": "icon.png"
+      "16": "images/icon.png",
+      "32": "images/icon.png",
+      "64": "images/icon.png"
     }
   },
   "content_scripts": [
@@ -34,7 +34,8 @@
   "web_accessible_resources": [
     {
       "resources": [
-        "images/46470_pandora_icon.png"
+        "images/46470_pandora_icon.png",
+        "images/icon.png"
       ],
       "matches": [],
       "extension_ids": [],

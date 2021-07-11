@@ -72,8 +72,6 @@ var ViewTimer = {
         }
         $("#session").prop("disabled", true);
         $("#break").prop("disabled", true);
-        $("#session").css("background-color", "grey");
-        $("#break").css("background-color", "grey");
         var jsontime = res.endTime;
         var endTime = new Date(jsontime);
         console.log("popup", endTime);
@@ -86,8 +84,7 @@ var ViewTimer = {
             clearInterval(timer);
             $("#session").prop("disabled", false);
             $("#break").prop("disabled", false);
-            $("#session").css("background-color", "#0C56D0");
-            $("#break").css("background-color", "#0C56D0");
+
           }
         }, 1000);
       } else {
@@ -100,8 +97,6 @@ var ViewTimer = {
     clearInterval(timer);
     $("#session").prop("disabled", false);
     $("#break").prop("disabled", false);
-    $("#animelink").css("display", "block");
-    $("#session").css("background-color", "#0C56D0");
-    $("#break").css("background-color", "#0C56D0");
+    $("#animelink").css("display", "inline");
   },
 };
