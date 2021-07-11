@@ -5,7 +5,8 @@ body{
     background-color: #5cb6f9;
 }
 .buttons{
-    margin:30px 0 0 0;
+    margin:30px 0 0 2px;
+    padding: 5px;
 }
 .timer{
     color: #f2fbff;
@@ -17,4 +18,10 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+#fact{
+    font-style: italic;
+    padding: 3px;
+    margin: 2px;
+    font-size: 1rem;
 }
